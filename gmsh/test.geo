@@ -10,10 +10,10 @@ l2 = 5.9;  // Length of cooling slots (mm)
 h = 4;     // Height (mm)
 m = 0.2;
 
-Point(1) = {0,0,0,m};
-Point(2) = {ri,0,0,m};
-Point(3) = {0,l,0,m};
-Point(4) = {ri,l,0,m};
+Point(1) = {0,0,0,8};
+Point(2) = {ri,0,0,8};
+Point(3) = {0,l,0,8};
+Point(4) = {ri,l,0,8};
 // Create line
 //Line(1) = {1,2};
 Line(2) = {3,1};
@@ -166,7 +166,7 @@ Physical Surface("Out", 73) = {6};
 
 // Raffinement autour du cercle central
 Field[1] = Distance;
-Field[1].CurvesList = {3}; // ID du cercle
+Field[1].CurvesList = {5}; // ID du cercle
 Field[2] = Threshold;
 Field[2].IField = 1;
 Field[2].LcMin = 0.2;   // Taille minimale du maillage près du cercle
