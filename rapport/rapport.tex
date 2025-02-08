@@ -1,5 +1,7 @@
+\documentclass{article}
 \usepackage{graphicx}
 \usepackage{caption}
+\usepackage{float}
 
 \begin{document}
 
@@ -10,15 +12,17 @@
 Pour extraire les parties du maillage voulu nous avons utilisé des clip en activant l'option 'crinkle clip', 
 cela permet de visualiser les partie du maillage raffiné ou grossière de près.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{images/maillage_raffiné.png}
     \caption{Maillage raffiné}
 \end{figure}
+
 Sur le maillage raffiné, on distingue les petites mailles. 
 La partie du maillage raffiné se situe près des trous, 
 ce qui permet une meilleure approximation de la forme que l'on souhaite représenter.
-\begin{figure}[h]
+
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{images/maillage_grossier.png}
     \caption{Maillage grossier}
