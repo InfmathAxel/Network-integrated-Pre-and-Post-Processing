@@ -1,0 +1,49 @@
+\usepackage{graphicx}
+\usepackage{caption}
+
+\begin{document}
+
+\section{Visualisation}
+
+\subsection{Topologie du maillage}
+
+Pour extraire les parties du maillage voulu nous avons utilisé des clip en activant l'option 'crinkle clip', 
+cela permet de visualiser les partie du maillage raffiné ou grossière de près.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/maillage_raffiné.png}
+    \caption{Maillage raffiné}
+\end{figure}
+Sur le maillage raffiné, on distingue les petites mailles. 
+La partie du maillage raffiné se situe près des trous, 
+ce qui permet une meilleure approximation de la forme que l'on souhaite représenter.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/maillage_grossier.png}
+    \caption{Maillage grossier}
+\end{figure}
+
+Sur le maillage grossier, on observe que les mailles ont la largeur de notre aimant. 
+Elles ne sont pas coupées, car nous avons choisi de les conserver entières dans notre coupe. 
+Ce maillage grossier se trouve loin des trous et des formes arrondies, 
+ce qui permet de réduire le temps de calcul et l’espace de stockage tout en conservant les détails essentiels.
+
+\subsection{Visualisation du champs éléctrique en fonction de la chaleur}
+Pour visualiser le champs éléctrique en fonction de la chaleur 
+nous avons affiché les 'streamlines' sur le champs éléctrique que l'on a seed en utilisant une sphere au centre de notre aimant. 
+Pour permettre de visualiser l'effet de la chaleur la coloration de ces 'streamlines' est en fonction de la chaleur.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/champ_electrique.png}
+    \caption{Champs éléctrique en fonction de la chaleur}
+\end{figure}
+\subsection{Extraction d'isosurface en fonction du potentiel éléctrique}
+Pour extraire les isosurface correspondant au valuer 390, 390.5 et 391 on selectionne le filtre 'contour' sur lequel on ajoute les valeurs voulu.
+Pour faire apparaitre le potentiel éléctrique on choisi la couleur de celui ci. 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/isosurface.png}
+    \caption{Isosurface correspondant au valeur 390, 390.5 et 391 en fonction du potentiel éléctrique}
+\end{figure}
+\end{document} 
