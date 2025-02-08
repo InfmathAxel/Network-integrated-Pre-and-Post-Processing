@@ -9,12 +9,13 @@ r1 = 10;   // Diameter of cooling hole (mm)
 w2 = 1.1;  // Width of cooling slots (mm)
 l2 = 5.9;  // Length of cooling slots (mm)
 h = 4;     // Height (mm)
+m = 0.2
 
 
-Point(1) = {0,0,0};
-Point(2) = {ri,0,0};
-Point(3) = {0,l,0};
-Point(4) = {ri,l,0};
+Point(1) = {0,0,0,m};
+Point(2) = {ri,0,0,m};
+Point(3) = {0,l,0,m};
+Point(4) = {ri,l,0,m};
 // Create line
 //Line(1) = {1,2};
 Line(2) = {3,1};
@@ -34,14 +35,14 @@ Plane Surface(2) = {3};
 
 // small hole at the bottom
 
-Point(6) = {10,8,0};
-Point(7) = {10+l2,8,0};
-Point(8) = {10+l2,8+w2,0};
-Point(9) = {10,8+w2,0};
+Point(6) = {10,8,0,m};
+Point(7) = {10+l2,8,0,m};
+Point(8) = {10+l2,8+w2,0,m};
+Point(9) = {10,8+w2,0,m};
 
 
-Point(10) = {10,8+w2/2,0};
-Point(11) = {10+l2,8+w2/2,0};
+Point(10) = {10,8+w2/2,0,m};
+Point(11) = {10+l2,8+w2/2,0,m};
 
 Line(6) = {6,7};
 Line(7) = {9,8};
@@ -52,14 +53,14 @@ Circle(9) = {8,11,7};
 
 // small hole at the bottom
 
-Point(12) = {10,88,0};
-Point(13) = {10+l2,88,0};
-Point(14) = {10,88+w2,0};
-Point(15) = {10+l2,88+w2,0};
+Point(12) = {10,88,0,m};
+Point(13) = {10+l2,88,0,m};
+Point(14) = {10,88+w2,0,m};
+Point(15) = {10+l2,88+w2,0,m};
 
 
-Point(16) = {10,w2/2+88,0};
-Point(17) = {10+l2,88+w2/2,0};
+Point(16) = {10,w2/2+88,0,m};
+Point(17) = {10+l2,88+w2/2,0,m};
 
 Line(10) = {12,13};
 Line(11) = {15,14};
@@ -71,32 +72,32 @@ Circle(13) = {15,17,13};
 // small hole at the top 
 
 
-Point(18) = {180,8,0};
-Point(19) = {180,8+w2,0};
-Point(20) = {180+l2,8,0};
-Point(21) = {180+l2,8+w2,0};
+Point(18) = {180,8,0,m};
+Point(19) = {180,8+w2,0,m};
+Point(20) = {180+l2,8,0,m};
+Point(21) = {180+l2,8+w2,0,m};
 
 
-Point(22) = {180,8+w2/2,0};
-Point(23) = {180+l2,8+w2/2,0};
+Point(22) = {180,8+w2/2,0,m};
+Point(23) = {180+l2,8+w2/2,0,m};
 
 Line(14) = {21,19};
-Line(15) = {18,20};
+Line(15) = {18,20,m};
 
 Circle(16) = {18,22,19};
-Circle(17) = {21,23,20};
+Circle(17) = {21,23,20,m};
 
 
 // small hole at the bottom
 
-Point(24) = {180,88,0};
-Point(25) = {180,88+w2,0};
-Point(26) = {180+l2,88,0};
-Point(27) = {180+l2,88+w2,0};
+Point(24) = {180,88,0,m};
+Point(25) = {180,88+w2,0,m};
+Point(26) = {180+l2,88,0,m};
+Point(27) = {180+l2,88+w2,0,m};
 
 
-Point(28) = {180,w2/2+88,0};
-Point(29) = {180+l2,88+w2/2,0};
+Point(28) = {180,w2/2+88,0,m};
+Point(29) = {180+l2,88+w2/2,0,m};
 
 Line(18) = {27,25};
 Line(19) = {24,26};
@@ -106,10 +107,10 @@ Circle(21) = {27,29,26};
 
 
 // first try : 
-Point(30) = {ri/2, -ri / (2 * Sin(Pi/36)), 0};
+Point(30) = {ri/2, -ri / (2 * Sin(Pi/36)), 0,m};
 Circle(22) = {1,30,2};
 
-Point(31) = {ri/2, l + -ri / (2 * Sin(Pi/36)), 0};
+Point(31) = {ri/2, l + -ri / (2 * Sin(Pi/36)), 0,m};
 Circle(23) = {3,31,4};
 
 
@@ -122,10 +123,10 @@ Point(200) = {ri,0,4};
 Point(300) = {0,l,4};
 Point(40) = {ri,l,4};
 // Create line
-//Line(100) = {100,200};
-Line(200) = {300,100};
-Line(300) = {40,200};
-//Line(400) = {300,400};
+//Line(100) = {100,200,m};
+Line(200) = {300,100,m};
+Line(300) = {40,200,m};
+//Line(400) = {300,400,m};
 
 
 // Circle in the center 
@@ -134,7 +135,7 @@ center_y = (l + 0) / 2;
 
 Circle(50) = {center_x, center_y, 4, r1/2}; // Circle in 2D plane (center, radius)
 
-Curve Loop(900) = {50};
+Curve Loop(900) = {50,m};
 Plane Surface(200) = {900};
 
 

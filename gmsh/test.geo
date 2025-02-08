@@ -8,7 +8,7 @@ r1 = 10;   // Diameter of cooling hole (mm)
 w2 = 1.1;  // Width of cooling slots (mm)
 l2 = 5.9;  // Length of cooling slots (mm)
 h = 4;     // Height (mm)
-m = 0.2
+m = 0.2;
 
 Point(1) = {0,0,0,m};
 Point(2) = {ri,0,0,m};
@@ -114,3 +114,67 @@ Circle(23) = {3,31,4};
 
 
 
+//+
+Curve Loop(4) = {10, -13, 11, -12};
+//+
+Curve Loop(5) = {11, -12, 10, -13};
+//+
+Plane Surface(3) = {5};
+//+
+Curve Loop(6) = {23, 3, -22, -2};
+//+
+Plane Surface(4) = {6};
+//+
+Curve Loop(7) = {7, 9, -6, 8};
+//+
+Plane Surface(5) = {7};
+//+
+Curve Loop(8) = {15, -17, 14, -16};
+//+
+Plane Surface(6) = {8};
+//+
+Curve Loop(9) = {18, -20, 19, -21};
+//+
+Surface(7) = {9};
+//+
+BooleanDifference{ Surface{4}; Delete; }{ Surface{2}; Surface{7}; Surface{6}; Surface{5}; Surface{3}; Delete; }
+//+
+Extrude {0, 0, 1} {
+  Surface{4}; 
+}
+//+
+Physical Volume("Cu", 68) = {1};
+//+
+Physical Surface("Cool_1", 69) = {17};
+//+
+Physical Surface("Cool_2", 70) = {13, 14, 15, 16};
+//+
+Physical Surface("Cool_2", 70) += {25, 24, 23, 22};
+//+
+Physical Surface("Cool_2", 70) += {19, 18, 21, 20};
+//+
+Physical Surface("Cool_2", 70) += {12, 11, 10, 9};
+//+
+Physical Surface("Channel", 71) = {8};
+//+
+Physical Surface("Channel", 71) += {5};
+//+
+Physical Surface("In", 72) = {7};
+//+
+Physical Surface("Out", 73) = {6};
+
+
+// Raffinement autour du cercle central
+Field[1] = Distance;
+Field[1].CurvesList = {3}; // ID du cercle
+Field[2] = Threshold;
+Field[2].IField = 1;
+Field[2].LcMin = 0.2;   // Taille minimale du maillage près du cercle
+Field[2].LcMax = 5;     // Taille maximale ailleurs
+Field[2].DistMin = 5;   // Distance minimale pour le raffinement
+Field[2].DistMax = 20;
+Background Field = 2;
+
+// Génération du maillage
+Mesh.CharacteristicLengthMax = 10;
+Mesh.CharacteristicLengthMin = 0.5;
