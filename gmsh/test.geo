@@ -139,7 +139,7 @@ Surface(7) = {9};
 //+
 BooleanDifference{ Surface{4}; Delete; }{ Surface{2}; Surface{7}; Surface{6}; Surface{5}; Surface{3}; Delete; }
 //+
-Extrude {0, 0, 1} {
+Extrude {0, 0, 4} {
   Surface{4}; 
 }
 //+
