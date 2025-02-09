@@ -8,13 +8,13 @@ r1 = 10;   // Diameter of cooling hole (mm)
 w2 = 1.1;  // Width of cooling slots (mm)
 l2 = 5.9;  // Length of cooling slots (mm)
 h = 4;     // Height (mm)
-m = 0.2;
+m = 0.2;   // Mesh size parameter
 
 Point(1) = {0,0,0,8};
 Point(2) = {ri,0,0,8};
 Point(3) = {0,l,0,8};
 Point(4) = {ri,l,0,8};
-// Create line
+
 //Line(1) = {1,2};
 Line(2) = {3,1};
 Line(3) = {4,2};
@@ -166,12 +166,12 @@ Physical Surface("Out", 73) = {6};
 
 // Raffinement autour du cercle central
 Field[1] = Distance;
-Field[1].CurvesList = {5}; // ID du cercle
+Field[1].CurvesList = {5}; 
 Field[2] = Threshold;
 Field[2].IField = 1;
-Field[2].LcMin = 0.2;   // Taille minimale du maillage près du cercle
-Field[2].LcMax = 5;     // Taille maximale ailleurs
-Field[2].DistMin = 5;   // Distance minimale pour le raffinement
+Field[2].LcMin = 0.2;   
+Field[2].LcMax = 5;     
+Field[2].DistMin = 5;   
 Field[2].DistMax = 20;
 Background Field = 2;
 
