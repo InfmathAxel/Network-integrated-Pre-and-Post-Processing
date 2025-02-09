@@ -4,7 +4,55 @@
 \usepackage{float}
 
 \begin{document}
+\section{Maillage}
 
+Avant de générer le maillage, il est nécessaire d'étudier la géométrie de l'aimant. On remarque que les côtés  \textit{\( \Gamma Channel \)} sont arrondis, avec des longueurs \textit{\( \Gamma  in\)} et \textit{\( \Gamma  out\)} de 100 mm, et un angle de \( \frac{\pi}{18} \) entre ces deux rayons.
+
+Pour tracer \textit{\( \Gamma  Channel \)}, nous partons des deux points \((0,0)\) et \((0, r_i)\), où \( r_i \) représente la largeur de l'aimant. En utilisant l'angle donné, nous pouvons calculer la position du centre du cercle passant par ces deux points. Nous reproduisons ensuite cette construction à une hauteur de 100 mm en ajoutant cette valeur aux coordonnées du centre du cercle.
+
+L’arc de cercle satisfait la relation trigonométrique suivante :
+\begin{equation}
+\sin\left(\frac{\theta}{2}\right) = \frac{d}{2R}
+\end{equation}
+Avec :
+\begin{equation}
+\sin\left(\frac{\pi}{36}\right) = \frac{r_i}{2R}
+\end{equation}
+Nous en déduisons :
+\begin{equation}
+R = \frac{r_i}{2 \sin(\pi/36)}
+\end{equation}
+
+Grâce à cette relation, nous obtenons la base du maillage :
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/gmsh_1.png}
+    \caption{Base du maillage}
+\end{figure}
+
+Ensuite, nous ajoutons le cercle central \textit{\( \Gamma  cool 1 \) }, dont le centre est situé en \( (r_i/2, l/2) \) et de rayon \( r_1/2 \). Enfin, nous insérons les fentes \textit{\( \Gamma  cool 2 \) }. Ne disposant pas d’informations précises sur leur position exacte, nous avons choisi de les placer arbitrairement. Leur base est définie par les points \((10,8)\) et \((10,88)\). À partir des données disponibles, nous générons les autres points en respectant une largeur \( w_2 = 1.1 \) mm et une longueur de 5.9 mm. 
+
+Le maillage obtenu est le suivant :
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/gmsh_2.png}
+    \caption{Maillage généré avec les fentes}
+\end{figure}
+
+Une fois cette base obtenue, nous procédons à son extrusion de 4 mm, comme demandé, avant d'appliquer le maillage final.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/gmsh_3.png}
+    \caption{Maillage final après extrusion}
+\end{figure}
+
+Le maillage est raffiné au niveau des zones arrondies afin d'améliorer leur approximation et garantir une meilleure précision.
+
+
+Notre maillage étant plus fin vers les arrondies pour mieux les approximer.
 \section{Visualisation}
 
 \subsection{Topologie du maillage}

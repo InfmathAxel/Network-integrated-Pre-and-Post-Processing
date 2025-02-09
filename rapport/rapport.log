@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.11)  8 FEB 2025 17:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.11)  9 FEB 2025 12:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -107,52 +107,76 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
-<images/maillage_raffiné.png, id=1, 337.26pt x 380.92313pt>
-File: images/maillage_raffiné.png Graphic file (type png)
-<use images/maillage_raffiné.png>
-Package pdftex.def Info: images/maillage_raffiné.png  used on input line 17.
-(pdftex.def)             Requested size: 241.49895pt x 272.77063pt.
-<images/maillage_grossier.png, id=3, 346.29375pt x 240.14719pt>
-File: images/maillage_grossier.png Graphic file (type png)
-<use images/maillage_grossier.png>
-Package pdftex.def Info: images/maillage_grossier.png  used on input line 27.
-(pdftex.def)             Requested size: 241.49895pt x 167.47893pt.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 9.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 9.
+<images/gmsh_1.png, id=1, 548.0475pt x 280.79906pt>
+File: images/gmsh_1.png Graphic file (type png)
+<use images/gmsh_1.png>
+Package pdftex.def Info: images/gmsh_1.png  used on input line 30.
+(pdftex.def)             Requested size: 241.49895pt x 123.7362pt.
+<images/gmsh_2.png, id=3, 729.47531pt x 382.42876pt>
+File: images/gmsh_2.png Graphic file (type png)
+<use images/gmsh_2.png>
+Package pdftex.def Info: images/gmsh_2.png  used on input line 40.
+(pdftex.def)             Requested size: 241.49895pt x 126.6045pt.
  [1
 
-{C:/Users/axeld/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./images/maillage_raffiné.png>]
-<images/champ_electrique.png, id=11, 1344.02126pt x 788.9475pt>
+{C:/Users/axeld/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./images/gmsh_1.png>]
+<images/gmsh_3.png, id=15, 1013.28563pt x 619.56468pt>
+File: images/gmsh_3.png Graphic file (type png)
+<use images/gmsh_3.png>
+Package pdftex.def Info: images/gmsh_3.png  used on input line 48.
+(pdftex.def)             Requested size: 241.49895pt x 147.65863pt.
+<images/maillage_raffiné.png, id=16, 337.26pt x 380.92313pt>
+File: images/maillage_raffiné.png Graphic file (type png)
+<use images/maillage_raffiné.png>
+Package pdftex.def Info: images/maillage_raffiné.png  used on input line 65.
+(pdftex.def)             Requested size: 241.49895pt x 272.77063pt.
+ [2 <./images/gmsh_2.png> <./images/gmsh_3.png>]
+<images/maillage_grossier.png, id=22, 346.29375pt x 240.14719pt>
+File: images/maillage_grossier.png Graphic file (type png)
+<use images/maillage_grossier.png>
+Package pdftex.def Info: images/maillage_grossier.png  used on input line 75.
+(pdftex.def)             Requested size: 241.49895pt x 167.47893pt.
+ [3 <./images/maillage_raffiné.png> <./images/maillage_grossier.png>]
+<images/champ_electrique.png, id=28, 1344.02126pt x 788.9475pt>
 File: images/champ_electrique.png Graphic file (type png)
 <use images/champ_electrique.png>
-Package pdftex.def Info: images/champ_electrique.png  used on input line 42.
+Package pdftex.def Info: images/champ_electrique.png  used on input line 90.
 (pdftex.def)             Requested size: 241.49895pt x 141.7516pt.
 
-Overfull \hbox (20.29584pt too wide) in paragraph at lines 45--45
+Overfull \hbox (20.29584pt too wide) in paragraph at lines 93--93
 []\OT1/cmr/bx/n/12 Extraction d'isosurface en fonc-tion du po-ten-tiel ^^Sel^^Sectrique 
  []
 
-<images/isosurface.png, id=12, 946.53625pt x 788.9475pt>
+<images/isosurface.png, id=29, 946.53625pt x 788.9475pt>
 File: images/isosurface.png Graphic file (type png)
 <use images/isosurface.png>
-Package pdftex.def Info: images/isosurface.png  used on input line 50.
+Package pdftex.def Info: images/isosurface.png  used on input line 98.
 (pdftex.def)             Requested size: 241.49895pt x 201.28127pt.
-[2 <./images/maillage_grossier.png> <./images/champ_electrique.png (PNG copy)>] [3 <./images/isosurface.png (PNG copy)>] (rapport.aux)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4 <./images/champ_electrique.png (PNG copy)>] [5 <./images/isosurface.png (PNG copy)>] (rapport.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 2718 strings out of 474541
- 49774 string characters out of 5744425
- 1927978 words of memory out of 5000000
- 24983 multiletter control sequences out of 15000+600000
- 559279 words of font info for 40 fonts, out of 8000000 for 9000
+ 2750 strings out of 474541
+ 50424 string characters out of 5744425
+ 1929978 words of memory out of 5000000
+ 25014 multiletter control sequences out of 15000+600000
+ 559625 words of font info for 41 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,7n,65p,325b,309s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/axeld/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/axeld/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on rapport.pdf (3 pages, 737577 bytes).
+ 57i,7n,65p,654b,309s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/axeld/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/axeld/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/axeld/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/axeld/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/axeld/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/axeld/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb>
+Output written on rapport.pdf (5 pages, 971007 bytes).
 PDF statistics:
- 29 PDF objects out of 1000 (max. 8388607)
+ 61 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
